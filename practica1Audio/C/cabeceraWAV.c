@@ -1,3 +1,7 @@
+/* Developed by:
+ * Gonzalez Pardo Adrian
+ * 3CM7 20-02
+ * Last file update: 21-04-2020 */
 #include "cabeceraWAV.h"
 
 void operaCabeceraVolumen(char *input,char *output){
