@@ -7,7 +7,8 @@
 void operaCabeceraVolumen(char *input,char *output){
   FILE *in,*out;
   int i,N;
-  short m;
+  short int m;
+  char *mm;
   datoCab cab;
   in=fopen(input,"rb");
   if(in==NULL){
@@ -24,15 +25,17 @@ void operaCabeceraVolumen(char *input,char *output){
   muestraCabeceraArchivo(&cab);
   N=(cab.subChunk2Size/cab.blockAlign);
   for(i=0;i<N;i++){
-    fread(&m,sizeof(short),1,in);
+    fread(&m,sizeof(short int),1,in);
     m*=0.5;
-    fwrite(&m,sizeof(short),1,out);
+    fwrite(&m,sizeof(short int),1,out);
   }
   N=cab.chunkSize-cab.subChunk2Size-36;
-  fread(&cab,N,1,in);
-  fwrite(&cab,N,1,out);
+  mm=(char*)malloc(sizeof(char)*N);
+  fread(mm,N,1,in);
+  fwrite(mm,N,1,out);
   fclose(in);
   fclose(out);
+  free(mm);
 }
 
 void muestraCabeceraArchivo(datoCab *cab){
