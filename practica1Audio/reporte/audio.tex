@@ -59,5 +59,29 @@
   \begin{center}
     \includegraphics[scale=0.75]{imgs/wavHeader.png}
   \end{center}
-  Con esto podremos reconocer que el orden de los primeros $44$ $bytes$ de información 
+  Con esto podremos reconocer que el orden de los primeros $44$ $bytes$ de información por lo que podremos construir la siguente estructura de C
+  \begin{center}
+    \lstinputlisting[language=C]{sources/headerWAV.h}
+  \end{center}
+  Una vez teniendo esta idea podremos implementar el siguiente Header llamado $cabeceraWAV.h$, cabe destacar que para la entrega separa e individual del archivo en el examen solo es necesario usar la carpeta "moodle", en cualquier otro caso hacer uso del "Makefile", por lo que es necesario tener cmake instalado para que solo con un simple $\$make$ para que finalmente se pueda generar el archivo del main y solo se realicen pruebas de escritorio.
+  \section{Código Fuente}
+  \subsection{Makefile}
+  \lstinputlisting[language=C]{../Makefile}
+  \subsection{Headers}
+  \begin{center}
+    \lstinputlisting[language=C]{../H/color.h}
+    \lstinputlisting[language=C]{../H/cabeceraWAV.h}
+  \end{center}
+  \subsection{Sources}
+  \begin{center}
+    \lstinputlisting[language=C]{../C/cabeceraWAV.c}
+    \lstinputlisting[language=C]{../C/main.c}
+  \end{center}
+  \subsection{Código aceptado por Moodle}
+  \begin{center}
+    \lstinputlisting[language=C]{../moodle/versionExMoodle.c}
+  \end{center}
+
+
+
 \end{document}
