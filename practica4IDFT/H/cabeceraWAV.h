@@ -1,13 +1,10 @@
+#include "color.h"
 /* Developed by:
  * Gonzalez Pardo Adrian
  * 3CM7 20-02
- * Last file update: 21-04-2020 */
+ * Last file update: 24-04-2020 */
 #include "color.h"
-#define cantidadMuestras 100
-#define fMuestreo 44100
-#define fCorte 2000
-#define rc 1/(2*M_PI*fCorte)
-#define constante 1/(rc*fMuestreo)
+
 
 typedef struct datos{
   char chunkID[4];
@@ -28,8 +25,11 @@ typedef struct datos{
   int subChunk2Size;		/* Numero de bytes en los datos */
 }datoCab;
 
-float *getFiltro(int);
-void copiaCabecera(datoCab*,FILE*,FILE*);
-void copiaPie(datoCab*,FILE*,FILE*);
-float absoluto(float);
-void operaConvolucion(char*,char*);
+datoCab *readCabecera(datoCab*,FILE*);
+short *sampleSignal(FILE*,int,short*);
+char *readPie(FILE*,int,char*);
+void copiaPie(FILE*,int,char*);
+short *channel1(short*,short*,int);
+short *channel2(short*,short*,int);
+double *idft(short*,short*,double*,int);
+void initIDFT(char*,char*);

@@ -20,8 +20,8 @@ typedef struct datos{
 	short int bitsPerSample;	/* 8 bits, 16 bits, etc. */
 
 	/* Aqui comienza el segundo subchunk 'data' */
-	char subChunk2Id[4];	/* Contiene 'data' */
-	int subChunk2Size;		/* Numero de bytes en los datos */
+  char subChunk2Id[4];	/* Contiene 'data' */
+  int subChunk2Size;		/* Numero de bytes en los datos */
 }datoCab;
 
 

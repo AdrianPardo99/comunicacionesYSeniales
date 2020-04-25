@@ -1,2 +1,4 @@
 main
 *.h.gch
+*.aux
+*.log
