@@ -1,0 +1,3 @@
+Escriba un programa que lea un archivo wav y genere otro archivo wav cuyo volumen sea la mitad del primero. El programa recibe los nombres de los archivos de entrada y salida de su linea de comando; por ejemplo:
+
+        $ volumen entrada.wav salida.wav

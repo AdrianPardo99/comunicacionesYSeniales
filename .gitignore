@@ -2,3 +2,5 @@ main
 *.h.gch
 *.aux
 *.log
+*.idx
+*.out
