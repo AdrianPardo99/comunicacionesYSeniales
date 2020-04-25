@@ -1,3 +1,3 @@
 # Practica 1 Audio:
 
-![Test-PDF](reporte/audio.pdf)
+Reporte y descripción via [click](reporte/audio.pdf)
